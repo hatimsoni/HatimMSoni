@@ -1,0 +1,22 @@
+.project-details-button{position:relative;z-index:3;align-self:flex-start;display:inline-flex;align-items:center;gap:9px;padding:8px 11px;margin:0 0 15px;border:1px solid var(--border);border-radius:5px;background:transparent;color:inherit;font-size:11px;cursor:pointer;transition:background .2s,color .2s}
+.project-details-button:hover{background:var(--lime);color:#101110}
+.project-dialog{position:fixed;border:1px solid var(--border);border-radius:14px;background:#181c14;color:#eef1e8;padding:38px;width:min(590px,calc(100% - 32px));max-height:85dvh;overflow:auto;box-shadow:0 30px 100px #0006}
+.project-dialog::backdrop{background:#070b08b8;backdrop-filter:blur(6px)}
+.project-dialog[open]{animation:page-enter .25s ease-out}
+.dialog-close{position:absolute;top:13px;right:13px;display:grid;place-items:center;border:1px solid var(--border);border-radius:50%;width:34px;height:34px;background:transparent;color:inherit}
+.project-dialog>.eyebrow{padding-right:25px}.project-dialog h2{font-size:30px;line-height:1.3;margin:20px 0 14px}
+.detail-description{color:var(--muted);font-size:14px;line-height:1.9}.project-dialog h3{font-size:14px;margin-top:26px}
+.detail-features{list-style:none;display:grid;gap:12px;padding:0;margin-top:17px;font-size:13px}
+.detail-features li{display:flex;align-items:center;gap:10px}.detail-features svg{color:var(--lime)}
+.detail-tags.tags span{font-size:11px;padding:7px 10px}.detail-actions{display:flex;align-items:flex-start;flex-direction:column;gap:22px;margin-top:28px;border-top:1px solid var(--border);padding-top:24px}
+.app-link-note{font-size:12px;color:var(--muted)}
+.copy-email{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:12px}.copy-email button{display:flex;align-items:center;gap:7px;border:0;background:none;color:var(--lime);font-size:11px;padding:5px 0}.copy-email>span{font-size:10px;color:var(--muted)}
+.services{padding-top:15px;padding-bottom:75px}.services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:30px}.service-card{background:#191e14;border:1px solid var(--border);border-radius:9px;padding:24px;display:flex;flex-direction:column}
+.service-card>svg{color:var(--lime);margin-bottom:20px}.service-card h3{font-size:16px;line-height:1.5}.service-card p{font-size:12px;line-height:1.9;color:var(--muted);margin:13px 0 20px}.service-card>span{margin-top:auto;font-size:9px;line-height:1.8;color:#a0ae90}
+.faq{padding-block:55px 80px;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1.3fr;gap:60px}.faq>div>p{font-size:12px;line-height:1.8;color:var(--muted);margin-top:22px}.faq a{color:var(--lime);display:inline-flex;gap:4px;align-items:center}.faq-list details{border-bottom:1px solid var(--border)}
+.faq-list summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-size:13px;padding:21px 0}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary:focus-visible{outline:2px solid var(--lime);outline-offset:3px}.faq-list summary svg{flex-shrink:0;color:var(--lime);transition:rotate .25s}.faq-list details[open] summary svg{rotate:45deg}.faq-list details p{font-size:12px;line-height:1.9;color:var(--muted);padding-bottom:22px}
+.search-shortcut{font-size:10px;color:var(--muted);margin-top:14px}.search-shortcut kbd{font-family:inherit;border:1px solid var(--border);border-radius:3px;padding:2px 5px}
+[data-theme='light'] .project-dialog{background:#f7f8f3;color:#26311e}[data-theme='light'] .service-card{background:#f0f4e9}[data-theme='light'] .service-card>span{color:#5a6d47}[data-theme='light'] .project-details-button:hover{color:#fff}
+@media(max-width:1050px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.faq{gap:35px}}
+@media(max-width:760px){.services{padding-bottom:45px}.services-grid{grid-template-columns:1fr}.service-card{padding:22px}.faq{grid-template-columns:1fr;gap:20px;padding-block:35px 55px}.faq h2{font-size:30px}.project-dialog{padding:32px 24px;max-height:90dvh}.project-dialog h2{font-size:25px}.search-shortcut{display:none}}
+@media(prefers-reduced-motion:reduce){.project-dialog[open]{animation:none}}

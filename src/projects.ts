@@ -1,0 +1,33 @@
+export type ProjectCategory = 'Web apps' | 'E-commerce' | 'Business websites' | 'Mobile apps';
+export type Project = {
+  id: string;
+  name: string;
+  category: ProjectCategory;
+  description: string;
+  tags: string[];
+  features: string[];
+  url?: string;
+  featured?: boolean;
+  accent: string;
+  monogram: string;
+};
+const phpStack = ['React', 'TypeScript', 'PHP', 'MySQL'];
+const tailwindStack = [...phpStack, 'Tailwind CSS'];
+export const projects: Project[] = [
+  { id: 'cheque-print', name: 'Cheque Print', category: 'Web apps', description: 'A modern cheque-printing platform with a landing page, dashboard, and reports to manage cheque printing in one place.', tags: tailwindStack, features: ['Cheque printing', 'Dashboard', 'Reports'], url: 'https://app.cheque-print.in/', featured: true, accent: '#b9e97d', monogram: 'CP' },
+  { id: 'bookcycle', name: 'BookCycle', category: 'Web apps', description: 'A platform for giving away and selling books, with in-app chat so readers can connect directly and arrange an exchange.', tags: tailwindStack, features: ['Free & paid books', 'In-app chat', 'Book exchange'], url: 'https://bookcycle.in/', featured: true, accent: '#e9bb87', monogram: 'bc' },
+  { id: 'office-management', name: 'Office Management System', category: 'Web apps', description: 'An office management platform for companies, bringing expenses, procurement, attendance, and other operational workflows together.', tags: tailwindStack, features: ['Expenses', 'Procurement', 'Attendance'], url: 'http://oms.ghadialiinfotech.com/', featured: true, accent: '#9ec9ee', monogram: 'OMS' },
+  { id: 'av-comparison', name: 'AV Product Comparison', category: 'Web apps', description: 'A comparison website for audiovisual products, built with React and Supabase and deployed on Vercel.', tags: ['React', 'TypeScript', 'Supabase', 'Vercel'], features: ['AV products', 'Product comparison', 'Supabase'], url: 'https://compare.alkanzinfotech.in/', featured: true, accent: '#bdb0f1', monogram: 'AV' },
+  { id: 'db-academic', name: 'DB Academic', category: 'Web apps', description: 'A community nonprofit website providing free Dini Talim books to students, with request forms, a custom admin panel, and Razorpay payment integration.', tags: [...tailwindStack, 'Razorpay'], features: ['Book requests', 'Custom admin', 'Razorpay'], url: 'http://dbacademic.org/', accent: '#9fd8b0', monogram: 'DB' },
+  { id: 'dreamz-decor', name: 'Dreamz Decor', category: 'E-commerce', description: 'An e-commerce website for a decor business, with a custom admin panel for managing orders and updating website content.', tags: phpStack, features: ['Decor storefront', 'Order management', 'Custom admin'], url: 'https://dreamzdecor.in/', featured: true, accent: '#e2b2a4', monogram: 'dd' },
+  { id: 'master-bolts', name: 'Master Bolts UAE', category: 'E-commerce', description: 'An e-commerce website for a hardware and fastener business, supported by a custom administration panel.', tags: phpStack, features: ['Hardware & fasteners', 'E-commerce', 'Custom admin'], url: 'https://masterboltsuae.com/', accent: '#b5c8da', monogram: 'MB' },
+  { id: 'bis-tracker', name: 'BIS Tracker', category: 'Web apps', description: 'A custom inventory and demo-unit tracking system with delivery challan generation, sales management, and purchase management. Hosted on Heroku.', tags: ['React', 'JavaScript', 'Node.js', 'Tailwind CSS', 'MongoDB', 'Heroku'], features: ['Inventory & demo units', 'Delivery challans', 'Sales & purchases'], url: 'https://bis-tracker-fe-17974b423b5d.herokuapp.com/', featured: true, accent: '#e2d38b', monogram: 'BIS' },
+  { id: 'sarrah-construction', name: 'Sarrah Construction', category: 'Business websites', description: 'A company website for a construction business, with a contact page powered by PHP and SMTP email delivery.', tags: ['React', 'TypeScript', 'PHP', 'SMTP'], features: ['Construction', 'Company website', 'Email enquiries'], url: 'https://sarrahconstruction.com/', accent: '#e1ba83', monogram: 'SC' },
+  { id: 'alkanz-infotech', name: 'AlKanz Infotech', category: 'Business websites', description: 'A business website for an audiovisual company, with a Web3Forms contact form for enquiries.', tags: ['React', 'TypeScript', 'Web3Forms'], features: ['Audiovisual business', 'Company website', 'Contact form'], url: 'https://www.alkanzinfotech.in/', accent: '#a6c9ef', monogram: 'AK' },
+  { id: 'ghadiali-infotech', name: 'Ghadiali Infotech', category: 'Business websites', description: 'A company website for an infotech business, with a PHP-powered contact form for email enquiries.', tags: ['React', 'TypeScript', 'PHP'], features: ['Infotech', 'Company website', 'PHP email'], url: 'https://infotech.ghadialigroup.com', accent: '#a8d7c7', monogram: 'GI' },
+  { id: 'ghadiali-ca', name: 'Ghadiali CA', category: 'Business websites', description: 'A professional website for a chartered accountancy firm, with PHP email handling for contact enquiries.', tags: ['React', 'TypeScript', 'PHP'], features: ['Accountancy', 'Firm website', 'Email enquiries'], url: 'http://ca.ghadialigroup.com/', accent: '#c5c4ed', monogram: 'CA' },
+  { id: 'ghadiali-legal', name: 'Ghadiali Legal', category: 'Business websites', description: 'A professional website for a legal firm, with a PHP-powered contact form for email enquiries.', tags: ['React', 'TypeScript', 'PHP'], features: ['Legal services', 'Firm website', 'Email enquiries'], url: 'http://legal.ghadialigroup.com/', accent: '#cfc5a5', monogram: 'GL' },
+  { id: 'fmb-connect', name: 'FMB Connect', category: 'Mobile apps', description: 'An Android application built with React Native, Tailwind styling, and MongoDB.', tags: ['React Native', 'Tailwind CSS', 'MongoDB', 'Android'], features: ['Android app', 'React Native', 'MongoDB'], accent: '#a7dcbc', monogram: 'fmb' },
+];
+export const featuredProjects = projects.filter(project => project.featured);
+export const projectCategories: ProjectCategory[] = ['Web apps', 'E-commerce', 'Business websites', 'Mobile apps'];
